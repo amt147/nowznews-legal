@@ -1,40 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>NowZNews TikTok Demo</title>
+  <meta charset="UTF-8" />
+  <title>NowZNews – TikTok Login Demo</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background: #f5f5f5;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
+
+    .card {
+      background: #020617;
+      border-radius: 18px;
+      padding: 32px 28px;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+      border: 1px solid #1f2937;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
     h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #111;
+      font-size: 24px;
+      margin: 0 0 10px 0;
+      color: #f9fafb;
     }
+
     p {
-      font-size: 18px;
-      margin-bottom: 25px;
-      color: #333;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #9ca3af;
+      margin: 0 0 22px 0;
     }
-    .btn-container {
+
+    .login-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .tiktok-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: none;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(135deg, #25f4ee, #fe2c55);
+      color: #020617;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .tiktok-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.6);
+      filter: brightness(1.05);
+    }
+
+    .tiktok-icon-wrap {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tiktok-icon-dot {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background: conic-gradient(
+        from 140deg,
+        #25f4ee,
+        #fe2c55,
+        #25f4ee
+      );
+      opacity: 0.35;
+    }
+
+    .tiktok-icon-letter {
+      position: relative;
+      font-size: 16px;
+      font-weight: 800;
+      color: #f9fafb;
+    }
+
+    .badge {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid #1f2937;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    .legal {
       margin-top: 20px;
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .legal a {
+      color: #9ca3af;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <main class="card">
+    <div class="brand">NowZNews · Sandbox</div>
+    <h1>TikTok Integration Demo</h1>
+    <p>
+      This page is used only to demo TikTok Login Kit for the NowZNews app.
+      Tap the button below to start the TikTok login flow in the sandbox environment.
+    </p>
 
-  <h1>NowZNews – TikTok Integration Demo</h1>
-  <p>Click the button below to simulate TikTok Login (Sandbox Mode).</p>
+    <div class="login-row">
+      <a
+        class="tiktok-btn"
+        href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawyqznmjuzkztlay&scope=user.info.basic&response_type=code&redirect_uri=https%3A%2F%2Famt147.github.io%2Fnowznews-legal%2F&state=demo123"
+      >
+        <span class="tiktok-icon-wrap">
+          <span class="tiktok-icon-dot"></span>
+          <span class="tiktok-icon-letter">T</span>
+        </span>
+        <span>Login with TikTok</span>
+      </a>
 
-  <div class="btn-container">
-    <a class="login-btn"
-       href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawyqznmjuzkztlay&scope=user.info.basic&response_type=code&redirect_uri=https%3A%2F%2Famt147.github.io%2Fnowznews-legal%2F&state=demo123">
-      <img src="https://lf16-tiktok-common.ibytedtos.com/obj/tiktok_web_login/web_login/new_login_kit_logo.svg"
-           width="240" alt="Login with TikTok">
-    </a>
-  </div>
+      <div class="hint">
+        This uses your sandbox app and test user to request the <code>user.info.basic</code> scope.
+      </div>
+    </div>
 
+    <div class="badge">
+      <span class="badge-dot"></span>
+      <span>End-to-end OAuth demo for TikTok review</span>
+    </div>
+
+    <div class="legal">
+      For full legal documents see
+      <a href="https://amt147.github.io/nowznews-legal/privacy.html">Privacy Policy</a>
+      and
+      <a href="https://amt147.github.io/nowznews-legal/terms.html">Terms of Service</a>.
+    </div>
+  </main>
 </body>
 </html>
