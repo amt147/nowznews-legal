@@ -1,56 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Terms of Service – NowZNews</title>
+  <meta charset="UTF-8" />
+  <title>NowZNews – Terms of Service</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    main {
+      background: #020617;
+      border-radius: 18px;
+      padding: 32px 28px;
+      max-width: 720px;
+      width: 92%;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+      border: 1px solid #1f2937;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 14px 0;
+      color: #f9fafb;
+    }
+
+    h2 {
+      font-size: 17px;
+      margin: 22px 0 8px 0;
+      color: #e5e7eb;
+    }
+
+    p, li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #d1d5db;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 6px 0 10px 0;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: #9ca3af;
+      border: 1px solid #1f2937;
+      background: rgba(15,23,42,0.9);
+      margin-bottom: 14px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 10px #38bdf8;
+    }
+
+    .footer-links {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+  </style>
 </head>
 <body>
-<h1>Terms of Service</h1>
+  <main>
+    <div class="brand">NowZNews · Sandbox</div>
+    <div class="tag">
+      <span class="dot"></span>
+      <span>Terms of Service for TikTok integration demo</span>
+    </div>
 
-<p>Last updated: November 2025</p>
+    <h1>Terms of Service</h1>
 
-<p>Welcome to NowZNews. By using our automated video creation and posting platform (“Service”), you agree to the following terms:</p>
+    <p>
+      These Terms of Service (“Terms”) govern your use of the <strong>NowZNews</strong> demo integration
+      with TikTok. This integration is currently used in a sandbox environment for testing and
+      TikTok Developer review.
+    </p>
 
-<h2>1. Description of Service</h2>
-<p>NowZNews automatically creates short-form videos based on trending news topics and can upload them to TikTok using the TikTok Open API. Users authorize the Service to publish videos on their TikTok account.</p>
+    <h2>1. Service description</h2>
+    <p>
+      NowZNews is an automation that generates short news videos (world, tech, and local topics),
+      creates a voiceover, combines it with stock footage, and can upload the final video
+      to your TikTok account using the TikTok Content Posting API.
+    </p>
 
-<h2>2. User Responsibilities</h2>
-<ul>
-  <li>You are responsible for the content generated and posted through the platform.</li>
-  <li>You agree not to use NowZNews for illegal, harmful, or misleading content.</li>
-  <li>You must comply with TikTok’s community guidelines and terms of service.</li>
-</ul>
+    <h2>2. Your responsibilities</h2>
+    <ul>
+      <li>You must comply with all TikTok Terms of Service, Community Guidelines, and relevant policies when using this integration.</li>
+      <li>You are responsible for any content that is generated and posted to your TikTok account via NowZNews.</li>
+      <li>You should not use this integration to post illegal, harmful, or misleading content.</li>
+    </ul>
 
-<h2>3. Permissions</h2>
-<p>By connecting your TikTok account, you grant us permission to:</p>
-<ul>
-  <li>Access your TikTok profile information</li>
-  <li>Upload and publish videos on your behalf</li>
-  <li>Manage upload sessions and video metadata</li>
-</ul>
+    <h2>3. Use of TikTok APIs</h2>
+    <ul>
+      <li>Our integration only requests the minimum scopes needed for login and content posting (such as <code>user.info.basic</code>, <code>video.upload</code>, and <code>video.publish</code> in sandbox).</li>
+      <li>We use these APIs solely to authenticate you and to upload and publish videos that the automation generates for you.</li>
+    </ul>
 
-<p>These permissions may be revoked in the TikTok settings at any time.</p>
+    <h2>4. No guarantee of availability</h2>
+    <p>
+      This demo integration is experimental and may change, break, or be discontinued at any time.
+      We do not guarantee uptime, performance, or continued access to TikTok APIs.
+    </p>
 
-<h2>4. Content Ownership</h2>
-<p>You retain all rights to the content generated through NowZNews. We do not claim ownership of any video or media created on your account.</p>
+    <h2>5. Limitation of liability</h2>
+    <p>
+      To the maximum extent permitted by law, NowZNews is not liable for any damages resulting from:
+    </p>
+    <ul>
+      <li>Errors in generated content or scripts.</li>
+      <li>Issues caused by third-party services such as TikTok, Pexels, or other providers.</li>
+      <li>Misuse of the integration or violation of TikTok’s terms by users.</li>
+    </ul>
 
-<h2>5. Limitation of Liability</h2>
-<p>We are not responsible for:</p>
-<ul>
-  <li>Incorrect or incomplete news summaries</li>
-  <li>Misuse of the automated posting feature</li>
-  <li>TikTok API outages or upload failures</li>
-  <li>Account suspensions caused by violating TikTok’s policies</li>
-</ul>
+    <h2>6. Changes to these Terms</h2>
+    <p>
+      We may update these Terms from time to time. If we make material changes, we will update the
+      document and adjust the “Last updated” date.
+    </p>
 
-<h2>6. Termination</h2>
-<p>You may disconnect or stop using the Service at any time. We may terminate access if you misuse the platform or violate TikTok content rules.</p>
+    <h2>7. Contact</h2>
+    <p>
+      If you have questions about these Terms or about the NowZNews integration, you can contact us at:
+      <strong>tararabdullah826@gmail.com</strong>.
+    </p>
 
-<h2>7. Changes to This Agreement</h2>
-<p>We may modify these Terms as needed. Continued use constitutes acceptance of updated Terms.</p>
-
-<h2>8. Contact Information</h2>
-<p>For questions about these Terms, contact: <strong>tararabdullah826@gmail.com</strong></p>
-
+    <div class="footer-links">
+      Also see our
+      <a href="https://amt147.github.io/nowznews-legal/privacy.html">Privacy Policy</a>.
+    </div>
+  </main>
 </body>
 </html>
