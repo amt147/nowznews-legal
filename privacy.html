@@ -1,76 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Privacy Policy – NowZNews</title>
+  <meta charset="UTF-8" />
+  <title>NowZNews – Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    main {
+      background: #020617;
+      border-radius: 18px;
+      padding: 32px 28px;
+      max-width: 720px;
+      width: 92%;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+      border: 1px solid #1f2937;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 14px 0;
+      color: #f9fafb;
+    }
+
+    h2 {
+      font-size: 17px;
+      margin: 22px 0 8px 0;
+      color: #e5e7eb;
+    }
+
+    p, li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #d1d5db;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 6px 0 10px 0;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: #9ca3af;
+      border: 1px solid #1f2937;
+      background: rgba(15,23,42,0.9);
+      margin-bottom: 14px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    .footer-links {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+  </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
+  <main>
+    <div class="brand">NowZNews · Sandbox</div>
+    <div class="tag">
+      <span class="dot"></span>
+      <span>Privacy Policy for TikTok integration demo</span>
+    </div>
 
-<p>Last updated: November 2025</p>
+    <h1>Privacy Policy</h1>
 
-<p>NowZNews (“we”, “our”, “us”) is an automated content-generation and posting tool that creates short news-style videos and enables users to publish them on TikTok using the TikTok Open API. This Privacy Policy explains how we collect, use, store, and protect your data.</p>
+    <p>
+      This Privacy Policy explains how <strong>NowZNews</strong> uses information when you
+      connect your TikTok account and when our automation creates and posts content on your behalf.
+      This document is primarily for TikTok Developer review and applies to our sandbox integration.
+    </p>
 
-<h2>1. Information We Collect</h2>
-<p>When you connect your TikTok account to NowZNews, we may collect the following information through TikTok’s Open API, with your explicit permission:</p>
-<ul>
-  <li>Your TikTok account ID</li>
-  <li>Basic profile information such as username and avatar</li>
-  <li>Video publishing permissions</li>
-  <li>Access tokens required to upload content on your behalf</li>
-</ul>
+    <h2>1. Data we receive</h2>
+    <p>When you log in with TikTok, we may receive the following information, depending on the scopes you approve:</p>
+    <ul>
+      <li>Basic profile information (for example: open ID, display name, avatar) via <code>user.info.basic</code>.</li>
+      <li>Video upload and publishing status (IDs, upload status, processing status) when we call the Content Posting API.</li>
+    </ul>
 
-<p>We also collect internally generated data such as:</p>
-<ul>
-  <li>Generated video files</li>
-  <li>Auto-generated captions and audio</li>
-  <li>System logs required for debugging</li>
-</ul>
+    <h2>2. How we use this data</h2>
+    <ul>
+      <li>To authenticate you and link your TikTok account to the NowZNews automation.</li>
+      <li>To upload videos that our workflow generates (news clips) to your TikTok account.</li>
+      <li>To check whether a video upload or publish request was successful.</li>
+    </ul>
+    <p>
+      We do <strong>not</strong> use this data to build advertising profiles, and we do <strong>not</strong> sell your data to third parties.
+    </p>
 
-<h2>2. How We Use Your Information</h2>
-<p>We use your data strictly for the following purposes:</p>
-<ul>
-  <li>Generating news-style videos automatically</li>
-  <li>Uploading videos to your TikTok account when you request it</li>
-  <li>Managing upload sessions using TikTok’s API</li>
-  <li>Operating and improving our automation workflow</li>
-</ul>
+    <h2>3. Data storage</h2>
+    <ul>
+      <li>Access tokens and refresh tokens are stored securely in our automation environment and are used only to call TikTok APIs you approved.</li>
+      <li>Log data (for example: upload status, error codes, log IDs) may be stored for debugging and monitoring.</li>
+      <li>Generated media files (videos and audio) may be stored locally for processing before they are uploaded to TikTok.</li>
+    </ul>
 
-<p>We do <strong>not</strong> sell, share, or rent your data to any third party.</p>
+    <h2>4. Sharing of data</h2>
+    <p>
+      We do not share your TikTok data with unrelated third parties. Data is shared only with:
+    </p>
+    <ul>
+      <li>TikTok, when making API requests you authorized.</li>
+      <li>Service providers we use to host or run our automation tools (for example, task runners or storage providers), strictly for operating the service.</li>
+    </ul>
 
-<h2>3. TikTok API Data</h2>
-<p>We follow all TikTok API usage requirements. TikTok data is used only to:</p>
-<ul>
-  <li>Authenticate your account</li>
-  <li>Generate upload URLs</li>
-  <li>Upload video files</li>
-  <li>Publish content</li>
-</ul>
+    <h2>5. Your choices</h2>
+    <ul>
+      <li>You can revoke our access to your TikTok account at any time through your TikTok account settings.</li>
+      <li>You may request that we delete locally stored logs or media that are associated with your account, subject to any legal requirements.</li>
+    </ul>
 
-<p>We do not access or read your private TikTok messages, follower list, or analytics unless TikTok adds such permissions and you explicitly grant them.</p>
+    <h2>6. Contact</h2>
+    <p>
+      If you have questions about this Privacy Policy or about how NowZNews uses your TikTok data,
+      you can contact us at: <strong>tararabdullah826@gmail.com</strong>.
+    </p>
 
-<h2>4. Storage and Security</h2>
-<p>We store only what is required for video processing. Video files may be temporarily stored during the automated editing and upload process; they are deleted afterwards. Access tokens are securely stored and automatically refreshed when needed.</p>
-
-<h2>5. User Rights</h2>
-<p>You may:</p>
-<ul>
-  <li>Disconnect NowZNews from your TikTok account at any time</li>
-  <li>Request deletion of stored data</li>
-  <li>Revoke permissions through TikTok’s settings</li>
-</ul>
-
-<h2>6. Third-Party Services</h2>
-<p>NowZNews integrates only with TikTok’s official Open API. No other third-party services are used for authentication or account-level access.</p>
-
-<h2>7. Children's Privacy</h2>
-<p>NowZNews is not intended for individuals under the age of 13.</p>
-
-<h2>8. Changes to This Policy</h2>
-<p>We may update this Privacy Policy occasionally. Continued use of the service means you accept the updated terms.</p>
-
-<h2>9. Contact Us</h2>
-<p>If you have questions about this Privacy Policy, email us at: <strong>abdullah.nowznews@gmail.com</strong></p>
-
+    <div class="footer-links">
+      Also see our
+      <a href="https://amt147.github.io/nowznews-legal/terms.html">Terms of Service</a>.
+    </div>
+  </main>
 </body>
 </html>
