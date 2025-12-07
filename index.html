@@ -6,11 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+  /* GLOBAL BACKGROUND WITH MYSTIC IMAGE */
   body {
     margin: 0;
-    background: #0A0A0F;
     color: #fff;
     font-family: 'Arial', sans-serif;
+
+    /* your mystic art as full-page background */
+    background: url('bg-mystic.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* dark overlay so text is readable */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 5, 15, 0.82);
+    backdrop-filter: blur(2px);
+    z-index: -1;
   }
 
   /* NAVBAR */
@@ -19,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 24px;
-    background: #0A0A0F;
+    background: rgba(10, 10, 15, 0.95);
     border-bottom: 1px solid #1A1A25;
     position: sticky;
     top: 0;
@@ -47,7 +62,7 @@
   .hero {
     padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(180deg, #B100FF 0%, #0A0A0F 60%);
+    background: linear-gradient(180deg, rgba(177,0,255,0.9) 0%, rgba(10,10,15,0.85) 60%);
   }
   .hero-title {
     font-size: 40px;
@@ -65,7 +80,7 @@
 
   /* TICKER */
   .ticker {
-    background: #111;
+    background: rgba(17, 17, 25, 0.95);
     padding: 10px;
     font-size: 15px;
     color: #B100FF;
@@ -82,7 +97,7 @@
     gap: 20px;
   }
   .card {
-    background: #11111A;
+    background: rgba(17, 17, 26, 0.92);
     border: 1px solid #1A1A25;
     padding: 16px;
     border-radius: 14px;
@@ -91,6 +106,10 @@
   .card:hover {
     border-color: #B100FF;
     box-shadow: 0 0 12px #8A2EFF;
+  }
+  .card-icon {
+    font-size: 34px;
+    margin-bottom: 8px;
   }
   .card h3 {
     font-size: 19px;
@@ -118,16 +137,32 @@
     gap: 12px;
   }
   .video-thumb {
-    background: #1A1A25;
-    height: 240px;
+    background: radial-gradient(circle at top, #B100FF33, #1A1A25);
+    height: 220px;
     border-radius: 12px;
     border: 1px solid #2A2A35;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  .video-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .video-label {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  .video-emoji {
+    font-size: 26px;
   }
 
   /* TRENDING */
   .trending {
     padding: 26px;
-    background: #0C0C12;
+    background: rgba(12, 12, 18, 0.95);
   }
   .trending h2 {
     font-size: 22px;
@@ -138,13 +173,19 @@
     padding: 12px 0;
     border-bottom: 1px solid #1A1A25;
     font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .trend-emoji {
+    font-size: 18px;
   }
 
   /* ABOUT */
   .about {
     padding: 30px 20px;
     text-align: center;
-    background: #0A0A0F;
+    background: rgba(10, 10, 15, 0.9);
   }
   .about p {
     opacity: 0.75;
@@ -188,39 +229,71 @@
   🔮 BREAKING: New AI reveals secret military leak… | ⚡ Tech CEO fired after scandal… | 🌎 TikTok trend causes global outage…
 </div>
 
-<!-- TOP STORIES -->
+<!-- TOP STORIES WITH ICONS -->
 <div class="stories">
   <div class="card">
-    <h3>🌍 World News</h3>
+    <div class="card-icon">🌍</div>
+    <h3>World News</h3>
     <p>Instant global stories curated for Gen-Z minds.</p>
   </div>
   <div class="card">
-    <h3>⚡ Tech News</h3>
-    <p>Every innovation that matters today.</p>
+    <div class="card-icon">💻</div>
+    <h3>Tech News</h3>
+    <p>Every innovation and scandal that actually matters today.</p>
   </div>
   <div class="card">
-    <h3>🇺🇸 US / Canada</h3>
-    <p>North American headlines in real time.</p>
+    <div class="card-icon">🇺🇸🇨🇦</div>
+    <h3>US / Canada</h3>
+    <p>North American headlines in real time, built for your feed.</p>
   </div>
 </div>
 
-<!-- VIDEOS -->
+<!-- VIDEO SECTION WITH ICONS -->
 <div class="videos">
   <h2>🔥 Trending Clips</h2>
   <div class="video-grid">
-    <div class="video-thumb"></div>
-    <div class="video-thumb"></div>
-    <div class="video-thumb"></div>
-    <div class="video-thumb"></div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">AI Law Explained in 30s</div>
+        <div class="video-emoji">🎥</div>
+      </div>
+    </div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">Tech Crash Breakdown</div>
+        <div class="video-emoji">📱</div>
+      </div>
+    </div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">US/Canada Weather Alert</div>
+        <div class="video-emoji">🌪️</div>
+      </div>
+    </div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">Meme of the Day</div>
+        <div class="video-emoji">🤣</div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- TRENDING -->
+<!-- TRENDING LIST WITH ICONS -->
 <div class="trending">
   <h2>📈 Viral Right Now</h2>
-  <div class="trend-item">#1 AI Exposes Hidden Email Leak</div>
-  <div class="trend-item">#2 Purple iPhone 17 Max Leak</div>
-  <div class="trend-item">#3 TikTok Creator Causes Market Spike</div>
+  <div class="trend-item">
+    <span class="trend-emoji">🔥</span>
+    <span>#1 AI Exposes Hidden Email Leak</span>
+  </div>
+  <div class="trend-item">
+    <span class="trend-emoji">📱</span>
+    <span>#2 Purple iPhone 17 Max Leak</span>
+  </div>
+  <div class="trend-item">
+    <span class="trend-emoji">📊</span>
+    <span>#3 TikTok Creator Causes Market Spike</span>
+  </div>
 </div>
 
 <!-- ABOUT -->
