@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NowZNews – Real-Time Gen-Z News</title>
+<title>NowZNews – Neon Gen-Z News</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
   body {
     margin: 0;
-    background: #0C0C0C;
-    color: white;
+    background: #0A0A0F;
+    color: #fff;
     font-family: 'Arial', sans-serif;
   }
 
@@ -18,111 +18,125 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 22px;
-    background: #0C0C0C;
-    border-bottom: 1px solid #1f1f1f;
+    padding: 18px 24px;
+    background: #0A0A0F;
+    border-bottom: 1px solid #1A1A25;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 100;
   }
   .logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #00ff66;
+    font-size: 30px;
+    font-weight: 900;
+    color: #B100FF;
+    text-shadow: 0 0 12px #8A2EFF;
     letter-spacing: -1px;
   }
   .nav-links a {
     margin-left: 18px;
     text-decoration: none;
-    color: #BFBFBF;
+    color: #D1D1D7;
     font-size: 14px;
+    transition: 0.2s;
+  }
+  .nav-links a:hover {
+    color: #B100FF;
   }
 
-  /* HERO GEN Z */
+  /* HERO PURPLE NEON */
   .hero {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(180deg, #00ff66 0%, #0C0C0C 45%);
+    background: linear-gradient(180deg, #B100FF 0%, #0A0A0F 60%);
   }
   .hero-title {
-    font-size: 38px;
+    font-size: 40px;
     font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 8px;
     color: black;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
   .hero-sub {
     font-size: 16px;
-    opacity: 0.9;
+    font-weight: 600;
     color: #000;
+    opacity: 0.8;
   }
 
   /* TICKER */
   .ticker {
     background: #111;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #00ff66;
-    font-weight: bold;
+    padding: 10px;
+    font-size: 15px;
+    color: #B100FF;
+    font-weight: 700;
     text-align: center;
-    border-bottom: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1A1A25;
   }
 
   /* TOP STORIES */
   .stories {
-    padding: 20px;
+    padding: 26px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
+    gap: 20px;
   }
   .card {
-    background: #151515;
-    border: 1px solid #222;
-    padding: 15px;
-    border-radius: 12px;
+    background: #11111A;
+    border: 1px solid #1A1A25;
+    padding: 16px;
+    border-radius: 14px;
+    transition: 0.2s;
+  }
+  .card:hover {
+    border-color: #B100FF;
+    box-shadow: 0 0 12px #8A2EFF;
   }
   .card h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0 0 8px;
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: #B100FF;
   }
   .card p {
+    opacity: 0.75;
     font-size: 14px;
-    opacity: 0.7;
   }
 
   /* VIDEO GRID */
   .videos {
-    padding: 20px;
+    padding: 26px;
   }
   .videos h2 {
     font-size: 22px;
     margin-bottom: 14px;
+    color: #B100FF;
+    text-shadow: 0 0 8px #8A2EFF;
   }
   .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 10px;
+    gap: 12px;
   }
   .video-thumb {
-    background: #202020;
+    background: #1A1A25;
     height: 240px;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 1px solid #2A2A35;
   }
 
   /* TRENDING */
   .trending {
-    padding: 20px;
-    background: #0f0f0f;
+    padding: 26px;
+    background: #0C0C12;
   }
   .trending h2 {
     font-size: 22px;
+    color: #B100FF;
     margin-bottom: 14px;
-    color: #00ff66;
   }
   .trend-item {
-    padding: 10px;
-    border-bottom: 1px solid #1f1f1f;
+    padding: 12px 0;
+    border-bottom: 1px solid #1A1A25;
     font-size: 15px;
   }
 
@@ -130,10 +144,10 @@
   .about {
     padding: 30px 20px;
     text-align: center;
-    background: #0C0C0C;
+    background: #0A0A0F;
   }
   .about p {
-    opacity: 0.7;
+    opacity: 0.75;
     font-size: 14px;
   }
 
@@ -150,7 +164,7 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <div class="nav">
   <div class="logo">NOWZNEWS</div>
   <div class="nav-links">
@@ -159,38 +173,38 @@
     <a href="#">USA/Canada</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
-    <a href="login.html" style="color:#00ff66;">Login</a>
+    <a href="login.html" style="color:#B100FF;">Login</a>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-title">WE SEE EVERYTHING</div>
-  <div class="hero-sub">Real-time AI powered Gen-Z news. No filters. No delays.</div>
+  <div class="hero-title">GEN-Z BREAKING NEWS</div>
+  <div class="hero-sub">Real-time AI powered neon broadcasting. Built for the viral generation.</div>
 </div>
 
 <!-- TICKER -->
 <div class="ticker">
-  🔥 BREAKING: New AI laws proposed… | ⚡ Tech stocks surge… | 🌎 Europe faces severe storm…
+  🔮 BREAKING: New AI reveals secret military leak… | ⚡ Tech CEO fired after scandal… | 🌎 TikTok trend causes global outage…
 </div>
 
 <!-- TOP STORIES -->
 <div class="stories">
   <div class="card">
-    <h3>🌎 World News</h3>
-    <p>Top global story for Gen-Z readers.</p>
+    <h3>🌍 World News</h3>
+    <p>Instant global stories curated for Gen-Z minds.</p>
   </div>
   <div class="card">
     <h3>⚡ Tech News</h3>
-    <p>The biggest tech update of today.</p>
+    <p>Every innovation that matters today.</p>
   </div>
   <div class="card">
     <h3>🇺🇸 US / Canada</h3>
-    <p>Major breaking events in North America.</p>
+    <p>North American headlines in real time.</p>
   </div>
 </div>
 
-<!-- VIDEO SECTION -->
+<!-- VIDEOS -->
 <div class="videos">
   <h2>🔥 Trending Clips</h2>
   <div class="video-grid">
@@ -201,22 +215,23 @@
   </div>
 </div>
 
-<!-- TRENDING BOARD -->
+<!-- TRENDING -->
 <div class="trending">
   <h2>📈 Viral Right Now</h2>
-  <div class="trend-item">#1 AI Law passes parliament</div>
-  <div class="trend-item">#2 New iPhone leak</div>
-  <div class="trend-item">#3 Massive winter storm alert</div>
+  <div class="trend-item">#1 AI Exposes Hidden Email Leak</div>
+  <div class="trend-item">#2 Purple iPhone 17 Max Leak</div>
+  <div class="trend-item">#3 TikTok Creator Causes Market Spike</div>
 </div>
 
 <!-- ABOUT -->
 <div class="about">
   <h3>About NowZNews</h3>
-  <p>We are a Gen-Z powered AI news broadcasting brand.  
-  Fast, real, and built for today’s attention.</p>
+  <p>The neon-powered Gen-Z news outlet created for speed, virality, and real-time truth.</p>
   <p>Contact: tararabdullah826@gmail.com</p>
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
-  © 2025 NowZNews
+<div class="footer">© 2025 NowZNews – Neon Broadcasting Gen-Z Leader</div>
+
+</body>
+</html>
