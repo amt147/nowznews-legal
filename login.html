@@ -62,6 +62,15 @@
     .back-link:hover {
       color: #e5e7eb;
     }
+    .code-box {
+      font-size: 12px;
+      word-break: break-all;
+      background:#020617;
+      border-radius:8px;
+      padding:10px;
+      border:1px solid #1f2937;
+      text-align:left;
+    }
   </style>
 </head>
 <body>
@@ -72,12 +81,12 @@
       to your profile on your behalf.
     </p>
 
-    <!-- REAL TikTok Login Button -->
+    <!-- TikTok Login Button -->
     <a class="btn" id="tiktok-login" href="#">
       <span>Login with TikTok</span>
     </a>
 
-    <a href="index.html" class="back-link">← Back to NowZNews homepage</a>
+    <a href="https://nowznews.com" class="back-link">← Back to NowZNews homepage</a>
   </div>
 
   <script>
@@ -85,10 +94,10 @@
     const CLIENT_KEY = "sbawyqznmjuzkztlay";
 
     // REAL redirect URL (MUST match TikTok dashboard exactly)
-    const REDIRECT_URI = encodeURIComponent("https://amt147.github.io/nowznews-legal/login.html");
+    const REDIRECT_URI = encodeURIComponent("https://nowznews.com/login.html");
 
     // Scopes needed for uploading videos + reading basic info
-    const SCOPE = encodeURIComponent("user.info.basic,user.info.stats,video.upload");
+    const SCOPE = encodeURIComponent("user.info.basic,user.info.stats,video.upload,video.publish");
 
     // Build TikTok authorization URL
     const tiktokAuthUrl =
@@ -101,6 +110,29 @@
 
     // Attach URL to button
     document.getElementById("tiktok-login").href = tiktokAuthUrl;
+
+    // ---- Show "Connected" message if we came back from TikTok ----
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+
+    if (code) {
+      const box = document.querySelector(".box");
+      box.innerHTML = `
+        <h1>TikTok Connected ✔</h1>
+        <p>
+          Your TikTok login worked.<br/>
+          Below is the authorization code that NowZNews (or n8n) can exchange
+          for an access token.
+        </p>
+        <div class="code-box">
+          <strong>Code:</strong><br/>${code}
+        </div>
+        <p style="margin-top:16px; font-size:12px; color:#9ca3af;">
+          You can safely close this tab once the code is captured by your automation.
+        </p>
+        <a href="https://nowznews.com" class="back-link">← Go to NowZNews homepage</a>
+      `;
+    }
   </script>
 </body>
 </html>
