@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NowZNews – Neon Gen-Z News</title>
+<title>NowZNews – AI-Powered Gen-Z News</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -18,7 +18,7 @@
     position: relative;
   }
 
-  /* dark overlay so text is readable */
+  /* dark overlay */
   body::before {
     content: "";
     position: fixed;
@@ -43,8 +43,8 @@
   .logo {
     font-size: 30px;
     font-weight: 900;
-    color: #B100FF;
-    text-shadow: 0 0 12px #8A2EFF;
+    color: #4ad3ff;
+    text-shadow: 0 0 12px #00baff;
     letter-spacing: -1px;
   }
   .nav-links a {
@@ -55,14 +55,14 @@
     transition: 0.2s;
   }
   .nav-links a:hover {
-    color: #B100FF;
+    color: #4ad3ff;
   }
 
-  /* HERO PURPLE NEON */
+  /* HERO */
   .hero {
     padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(180deg, rgba(177,0,255,0.9) 0%, rgba(10,10,15,0.85) 60%);
+    background: linear-gradient(180deg, rgba(0,180,255,0.9) 0%, rgba(10,10,15,0.85) 60%);
   }
   .hero-title {
     font-size: 40px;
@@ -83,7 +83,7 @@
     background: rgba(17, 17, 25, 0.95);
     padding: 10px;
     font-size: 15px;
-    color: #B100FF;
+    color: #4ad3ff;
     font-weight: 700;
     text-align: center;
     border-bottom: 1px solid #1A1A25;
@@ -104,8 +104,8 @@
     transition: 0.2s;
   }
   .card:hover {
-    border-color: #B100FF;
-    box-shadow: 0 0 12px #8A2EFF;
+    border-color: #4ad3ff;
+    box-shadow: 0 0 12px #00baff;
   }
   .card-icon {
     font-size: 34px;
@@ -114,7 +114,7 @@
   .card h3 {
     font-size: 19px;
     margin-bottom: 10px;
-    color: #B100FF;
+    color: #4ad3ff;
   }
   .card p {
     opacity: 0.75;
@@ -128,8 +128,8 @@
   .videos h2 {
     font-size: 22px;
     margin-bottom: 14px;
-    color: #B100FF;
-    text-shadow: 0 0 8px #8A2EFF;
+    color: #4ad3ff;
+    text-shadow: 0 0 8px #00baff;
   }
   .video-grid {
     display: grid;
@@ -137,7 +137,7 @@
     gap: 12px;
   }
   .video-thumb {
-    background: radial-gradient(circle at top, #B100FF33, #1A1A25);
+    background: radial-gradient(circle at top, #4ad3ff33, #1A1A25);
     height: 220px;
     border-radius: 12px;
     border: 1px solid #2A2A35;
@@ -166,7 +166,7 @@
   }
   .trending h2 {
     font-size: 22px;
-    color: #B100FF;
+    color: #4ad3ff;
     margin-bottom: 14px;
   }
   .trend-item {
@@ -197,9 +197,10 @@
     text-align: center;
     padding: 20px;
     font-size: 13px;
-    opacity: 0.5;
+    opacity: 0.8;
+    color: #4ad3ff;
+    text-shadow: 0 0 8px #00baff;
   }
-
 </style>
 </head>
 
@@ -209,102 +210,75 @@
 <div class="nav">
   <div class="logo">NOWZNEWS</div>
   <div class="nav-links">
-    <a href="#">World</a>
-    <a href="#">Tech</a>
-    <a href="#">USA/Canada</a>
+    <a href="world.html">World</a>
+    <a href="tech.html">Tech</a>
+    <a href="northamerica.html">US/Canada</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
-    <a href="login.html" style="color:#B100FF;">Login</a>
+    <a href="login.html" style="color:#4ad3ff;">Login</a>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-title">GEN-Z BREAKING NEWS</div>
-  <div class="hero-sub">Real-time AI powered neon broadcasting. Built for the viral generation.</div>
+  <div class="hero-title">AI-POWERED BREAKING NEWS</div>
+  <div class="hero-sub">Real-time intelligence. Real stories. Built for the viral generation.</div>
 </div>
 
 <!-- TICKER -->
 <div class="ticker">
-  🔮 BREAKING: New AI reveals secret military leak… | ⚡ Tech CEO fired after scandal… | 🌎 TikTok trend causes global outage…
+  🤖 BREAKING: AI uncovers secret military leak… | 📱 Tech CEO removed after scandal… | 🌎 Viral trend causes global outage…
 </div>
 
-<!-- TOP STORIES WITH ICONS -->
+<!-- TOP STORIES -->
 <div class="stories">
   <div class="card">
     <div class="card-icon">🌍</div>
     <h3>World News</h3>
-    <p>Instant global stories curated for Gen-Z minds.</p>
+    <p>Instant global events curated through advanced AI analysis.</p>
   </div>
   <div class="card">
     <div class="card-icon">💻</div>
     <h3>Tech News</h3>
-    <p>Every innovation and scandal that actually matters today.</p>
+    <p>Everything shaping the future of technology — in real time.</p>
   </div>
   <div class="card">
     <div class="card-icon">🇺🇸🇨🇦</div>
     <h3>US / Canada</h3>
-    <p>North American headlines in real time, built for your feed.</p>
+    <p>North American headlines optimized for Gen-Z attention.</p>
   </div>
 </div>
 
-<!-- VIDEO SECTION WITH ICONS -->
+<!-- VIDEO SECTION -->
 <div class="videos">
   <h2>🔥 Trending Clips</h2>
   <div class="video-grid">
-    <div class="video-thumb">
-      <div class="video-row">
-        <div class="video-label">AI Law Explained in 30s</div>
-        <div class="video-emoji">🎥</div>
-      </div>
-    </div>
-    <div class="video-thumb">
-      <div class="video-row">
-        <div class="video-label">Tech Crash Breakdown</div>
-        <div class="video-emoji">📱</div>
-      </div>
-    </div>
-    <div class="video-thumb">
-      <div class="video-row">
-        <div class="video-label">US/Canada Weather Alert</div>
-        <div class="video-emoji">🌪️</div>
-      </div>
-    </div>
-    <div class="video-thumb">
-      <div class="video-row">
-        <div class="video-label">Meme of the Day</div>
-        <div class="video-emoji">🤣</div>
-      </div>
-    </div>
+    <div class="video-thumb"><div class="video-row"><div class="video-label">AI Law in 30s</div><div class="video-emoji">🎥</div></div></div>
+    <div class="video-thumb"><div class="video-row"><div class="video-label">Tech Crash</div><div class="video-emoji">📱</div></div></div>
+    <div class="video-thumb"><div class="video-row"><div class="video-label">Storm Alert</div><div class="video-emoji">🌪️</div></div></div>
+    <div class="video-thumb"><div class="video-row"><div class="video-label">Meme of the Day</div><div class="video-emoji">🤣</div></div></div>
   </div>
 </div>
 
-<!-- TRENDING LIST WITH ICONS -->
+<!-- TRENDING -->
 <div class="trending">
   <h2>📈 Viral Right Now</h2>
-  <div class="trend-item">
-    <span class="trend-emoji">🔥</span>
-    <span>#1 AI Exposes Hidden Email Leak</span>
-  </div>
-  <div class="trend-item">
-    <span class="trend-emoji">📱</span>
-    <span>#2 Purple iPhone 17 Max Leak</span>
-  </div>
-  <div class="trend-item">
-    <span class="trend-emoji">📊</span>
-    <span>#3 TikTok Creator Causes Market Spike</span>
-  </div>
+  <div class="trend-item"><span class="trend-emoji">🔥</span><span>#1 AI Exposes Hidden Email Leak</span></div>
+  <div class="trend-item"><span class="trend-emoji">📱</span><span>#2 iPhone Leak Breaks Web</span></div>
+  <div class="trend-item"><span class="trend-emoji">⚡</span><span>#3 Influencer Causes Market Spike</span></div>
 </div>
 
 <!-- ABOUT -->
 <div class="about">
   <h3>About NowZNews</h3>
-  <p>The neon-powered Gen-Z news outlet created for speed, virality, and real-time truth.</p>
+  <p>The AI-powered Gen-Z news machine built for speed, accuracy, and viral reach.</p>
   <p>Contact: tararabdullah826@gmail.com</p>
 </div>
 
 <!-- FOOTER -->
-<div class="footer">© 2025 NowZNews – Neon Broadcasting Gen-Z Leader</div>
+<div class="footer">
+  ⚡ NowZNews • Real-Time Artificial Intelligence Reporting the World As It Happens ⚡
+</div>
 
 </body>
 </html>
