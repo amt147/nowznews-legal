@@ -72,12 +72,8 @@
       to your profile on your behalf.
     </p>
 
-    <!-- TikTok Login URL – we will fill this correctly later -->
-    <a
-      class="btn"
-      id="tiktok-login"
-      href="#"
-    >
+    <!-- REAL TikTok Login Button -->
+    <a class="btn" id="tiktok-login" href="#">
       <span>Login with TikTok</span>
     </a>
 
@@ -85,13 +81,16 @@
   </div>
 
   <script>
-    // TODO: Replace these with your real values
-    const CLIENT_KEY = "YOUR_CLIENT_KEY";
-    const REDIRECT_URI = encodeURIComponent("YOUR_REDIRECT_URL");
+    // REAL client key
+    const CLIENT_KEY = "sbawyqznmjuzkztlay";
 
-    // Example basic scope list (we will adjust based on your app scopes later)
+    // REAL redirect URL (MUST match TikTok dashboard exactly)
+    const REDIRECT_URI = encodeURIComponent("https://amt147.github.io/nowznews-legal/login.html");
+
+    // Scopes needed for uploading videos + reading basic info
     const SCOPE = encodeURIComponent("user.info.basic,user.info.stats,video.upload");
 
+    // Build TikTok authorization URL
     const tiktokAuthUrl =
       "https://www.tiktok.com/v2/auth/authorize/?" +
       "client_key=" + CLIENT_KEY +
@@ -100,6 +99,7 @@
       "&redirect_uri=" + REDIRECT_URI +
       "&state=nowznews_login_demo";
 
+    // Attach URL to button
     document.getElementById("tiktok-login").href = tiktokAuthUrl;
   </script>
 </body>
