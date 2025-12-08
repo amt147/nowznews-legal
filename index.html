@@ -11,8 +11,6 @@
     margin: 0;
     color: #fff;
     font-family: 'Arial', sans-serif;
-
-    /* your mystic art as full-page background */
     background: url('bg-mystic.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
@@ -192,14 +190,79 @@
     font-size: 14px;
   }
 
+  /* SOCIAL SECTION */
+  .social-section {
+    padding: 30px 20px 40px;
+    background: rgba(5, 8, 18, 0.95);
+  }
+  .social-section h2 {
+    font-size: 22px;
+    color: #4ad3ff;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .social-section p {
+    text-align: center;
+    font-size: 14px;
+    color: #a1a1aa;
+    margin-bottom: 20px;
+  }
+  .social-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .social-card {
+    background: rgba(10, 15, 25, 0.95);
+    border: 1px solid #1A1A25;
+    border-radius: 14px;
+    padding: 16px;
+    text-align: left;
+  }
+  .social-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  .social-emoji {
+    font-size: 20px;
+  }
+  .social-card p {
+    font-size: 13px;
+    color: #a1a1aa;
+    margin-bottom: 8px;
+  }
+  .social-card a {
+    font-size: 13px;
+    color: #4ad3ff;
+    text-decoration: none;
+  }
+  .social-card a:hover {
+    text-decoration: underline;
+  }
+
   /* FOOTER */
   .footer {
     text-align: center;
-    padding: 20px;
-    font-size: 13px;
-    opacity: 0.8;
+    padding: 18px;
+    font-size: 12px;
+    opacity: 0.9;
+    color: #cfd9ff;
+    background: rgba(5, 7, 15, 0.95);
+    border-top: 1px solid #1A1A25;
+  }
+  .footer a {
     color: #4ad3ff;
-    text-shadow: 0 0 8px #00baff;
+    text-decoration: none;
+    margin: 0 6px;
+    font-size: 12px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
   }
 </style>
 </head>
@@ -210,24 +273,25 @@
 <div class="nav">
   <div class="logo">NOWZNEWS</div>
   <div class="nav-links">
-    <a href="world.html">World</a>
-    <a href="tech.html">Tech</a>
-    <a href="northamerica.html">US/Canada</a>
+    <a href="#top">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
+    <a href="#social">Socials</a>
     <a href="login.html" style="color:#4ad3ff;">Login</a>
   </div>
 </div>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero" id="top">
   <div class="hero-title">AI-POWERED BREAKING NEWS</div>
   <div class="hero-sub">Real-time intelligence. Real stories. Built for the viral generation.</div>
 </div>
 
 <!-- TICKER -->
 <div class="ticker">
-  🤖 BREAKING: AI uncovers secret military leak… | 📱 Tech CEO removed after scandal… | 🌎 Viral trend causes global outage…
+  🤖 LIVE: AI tracks global headlines… | 📱 Tech chaos explained in 60 seconds… | 🌎 US/Canada stories tuned for your feed…
 </div>
 
 <!-- TOP STORIES -->
@@ -251,12 +315,32 @@
 
 <!-- VIDEO SECTION -->
 <div class="videos">
-  <h2>🔥 Trending Clips</h2>
+  <h2>🔥 Trending Clips (Sample)</h2>
   <div class="video-grid">
-    <div class="video-thumb"><div class="video-row"><div class="video-label">AI Law in 30s</div><div class="video-emoji">🎥</div></div></div>
-    <div class="video-thumb"><div class="video-row"><div class="video-label">Tech Crash</div><div class="video-emoji">📱</div></div></div>
-    <div class="video-thumb"><div class="video-row"><div class="video-label">Storm Alert</div><div class="video-emoji">🌪️</div></div></div>
-    <div class="video-thumb"><div class="video-row"><div class="video-label">Meme of the Day</div><div class="video-emoji">🤣</div></div></div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">AI Law in 30s</div>
+        <div class="video-emoji">🎥</div>
+      </div>
+    </div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">Tech Crash</div>
+        <div class="video-emoji">📱</div>
+      </div>
+    </div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">Storm Alert</div>
+        <div class="video-emoji">🌪️</div>
+      </div>
+    </div>
+    <div class="video-thumb">
+      <div class="video-row">
+        <div class="video-label">Meme of the Day</div>
+        <div class="video-emoji">🤣</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -275,9 +359,58 @@
   <p>Contact: tararabdullah826@gmail.com</p>
 </div>
 
+<!-- SOCIAL SECTION -->
+<div class="social-section" id="social">
+  <h2>📺 Watch & Follow NowZNews</h2>
+  <p>We don’t just report — we stream, post, and go viral across platforms. Tap below to follow our real channels.</p>
+
+  <div class="social-grid">
+    <!-- YouTube -->
+    <div class="social-card">
+      <div class="social-title">
+        <span class="social-emoji">▶️</span>
+        <span>YouTube – NowZNews Channel</span>
+      </div>
+      <p>Watch our AI-powered news shorts, deep dives, and viral breakdowns.</p>
+      <a href="https://www.youtube.com/channel/UCsObwSaZ1_FhzIf-UG8iXLg" target="_blank">
+        Open YouTube Channel →
+      </a>
+    </div>
+
+    <!-- Facebook -->
+    <div class="social-card">
+      <div class="social-title">
+        <span class="social-emoji">📘</span>
+        <span>Facebook – NowZNews</span>
+      </div>
+      <p>Like our page to catch daily clips, headlines, and live reactions.</p>
+      <a href="https://www.facebook.com/nowznews1/" target="_blank">
+        Open Facebook Page →
+      </a>
+    </div>
+
+    <!-- Instagram -->
+    <div class="social-card">
+      <div class="social-title">
+        <span class="social-emoji">📸</span>
+        <span>Instagram – @nowznews1</span>
+      </div>
+      <p>Swipe through stories, reels, and behind-the-scenes AI moments.</p>
+      <a href="https://www.instagram.com/nowznews1/" target="_blank">
+        Open Instagram Profile →
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <div class="footer">
   ⚡ NowZNews • Real-Time Artificial Intelligence Reporting the World As It Happens ⚡
+  <br>
+  Follow us:
+  <a href="https://www.youtube.com/channel/UCsObwSaZ1_FhzIf-UG8iXLg" target="_blank">YouTube</a> |
+  <a href="https://www.facebook.com/nowznews1/" target="_blank">Facebook</a> |
+  <a href="https://www.instagram.com/nowznews1/" target="_blank">Instagram</a>
 </div>
 
 </body>
