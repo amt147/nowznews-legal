@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NowZNews – Creator Login with TikTok</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #020617;
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .box {
+      border-radius: 16px;
+      border: 1px solid #1f2937;
+      padding: 28px 24px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      background: radial-gradient(circle at top left, #111827, #020617);
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: #000000;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid #e5e7eb;
+      cursor: pointer;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .back-link {
+      margin-top: 16px;
+      display: inline-block;
+      font-size: 12px;
+      color: #9ca3af;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      color: #e5e7eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Creator Login</h1>
+    <p>
+      Connect your TikTok account so NowZNews can publish AI-generated news videos 
+      to your profile on your behalf.
+    </p>
+
+    <!-- TikTok Login URL – we will fill this correctly later -->
+    <a
+      class="btn"
+      id="tiktok-login"
+      href="#"
+    >
+      <span>Login with TikTok</span>
+    </a>
+
+    <a href="index.html" class="back-link">← Back to NowZNews homepage</a>
+  </div>
+
+  <script>
+    // TODO: Replace these with your real values
+    const CLIENT_KEY = "YOUR_CLIENT_KEY";
+    const REDIRECT_URI = encodeURIComponent("YOUR_REDIRECT_URL");
+
+    // Example basic scope list (we will adjust based on your app scopes later)
+    const SCOPE = encodeURIComponent("user.info.basic,user.info.stats,video.upload");
+
+    const tiktokAuthUrl =
+      "https://www.tiktok.com/v2/auth/authorize/?" +
+      "client_key=" + CLIENT_KEY +
+      "&response_type=code" +
+      "&scope=" + SCOPE +
+      "&redirect_uri=" + REDIRECT_URI +
+      "&state=nowznews_login_demo";
+
+    document.getElementById("tiktok-login").href = tiktokAuthUrl;
+  </script>
+</body>
+</html>
