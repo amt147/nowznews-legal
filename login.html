@@ -72,23 +72,24 @@
       to your profile on your behalf.
     </p>
 
-    <!-- REAL TikTok Login Button -->
+    <!-- TikTok Login Button -->
     <a class="btn" id="tiktok-login" href="#">
       <span>Login with TikTok</span>
     </a>
 
-    <a href="index.html" class="back-link">← Back to NowZNews homepage</a>
+    <a href="https://nowznews.com" class="back-link">← Back to NowZNews homepage</a>
   </div>
 
   <script>
     // REAL client key
     const CLIENT_KEY = "sbawyqznmjuzkztlay";
 
-    // REAL redirect URL (MUST match TikTok dashboard exactly)
-    const REDIRECT_URI = encodeURIComponent("https://amt147.github.io/nowznews-legal/login.html");
+    // REAL redirect URL (must match TikTok dashboard exactly)
+    // TikTok will send the user back to this page after login
+    const REDIRECT_URI = encodeURIComponent("https://nowznews.com/login.html");
 
-    // Scopes needed for uploading videos + reading basic info
-    const SCOPE = encodeURIComponent("user.info.basic,user.info.stats,video.upload");
+    // Scopes that your app is using (as seen in the URL TikTok gave you)
+    const SCOPE = encodeURIComponent("user.info.basic,user.info.stats,video.upload,video.publish");
 
     // Build TikTok authorization URL
     const tiktokAuthUrl =
